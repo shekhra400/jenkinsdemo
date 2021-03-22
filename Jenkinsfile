@@ -19,7 +19,7 @@ pipeline {
       steps {
       
       echo "*************CloudHub Deployment start**************"
-        bat "mvn deploy -Dmule.version=4.3.0 -Dusername=shekshukla -Dpassword=Kansas@12345 -Denv=Test -Dappname=jenkinsdemo400 -Dworkers=1 -DworkerType=Micro -DmuleDeploy -DskipTests"
+        bat "mvn clean deploy -DmuleDeploy -DskipTests -Dmule.version=4.3.0 -Danypoint.username=shekshukla -Danypoint.password=Kansas@12345 -Denv=Test -Dappname=jenkinsdemo400 -Dworkers=1 -DworkerType=Micro"
       }
       
     }
