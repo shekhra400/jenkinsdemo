@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="eb61289d-04d1-460e-b5e8-a13d3bc44309" >
+		<http:listener-connection host="0.0.0.0" port="8083" />
+	</http:listener-config>
+	<flow name="jenkinsdemoFlow" doc:id="2d29ef92-31c9-4965-96cb-9d3a0ddb8626" >
+		<http:listener doc:name="Listener" doc:id="23ba455e-d70e-482a-ba12-90fc8c77672a" config-ref="HTTP_Listener_config" path="/jenkinsdemo"/>
+		<logger level="INFO" doc:name="Logger" doc:id="ed15f15c-04e1-4d41-bf9b-ce7b0109e92c" />
+		<set-payload value='#["Jenkins demo working successfully!!"]' doc:name="Set Payload" doc:id="13a7f60b-e6b9-4f1d-93c7-2d6471513b5c" />
+	</flow>
+</mule>
