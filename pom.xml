@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.mycompany</groupId>
-	<artifactId>jenkinsdemo</artifactId>
+	<artifactId>jenkinsdemo400</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>mule-application</packaging>
 
@@ -38,8 +38,9 @@
 				      <applicationName>${appname}</applicationName>
 				      <environment>${env}</environment>
 				      <workers>${workers}</workers>
-				      <region>eu-west-2</region>
+				      <region>us-east-1</region>
             		  <workerType>${workerType}</workerType>
+					  <businessGroup>Deloitte Integration Services</businessGroup>
 			    	</cloudHubDeployment>
 				</configuration>
 			</plugin>
